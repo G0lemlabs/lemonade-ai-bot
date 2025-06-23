@@ -55,4 +55,4 @@ def send_telegram_message(chat_id, text):
     requests.post(f"{TELEGRAM_API_URL}/sendMessage", json=payload)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000)
