@@ -22,6 +22,8 @@ def webhook():
 
     chat_id = data["message"]["chat"]["id"]
     user_msg = data["message"].get("text", "")
+    fix:bind flask to 0.0.0.0 for Railway
+    
 
     reply = generate_lemonade_reply(user_msg)
     send_telegram_message(chat_id, reply)
